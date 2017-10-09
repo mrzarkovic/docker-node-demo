@@ -1,0 +1,11 @@
+version: '2'
+volumes: 
+  nodemodules:
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/app/backend
+      - nodemodules:/home/app/backend/node_modules
